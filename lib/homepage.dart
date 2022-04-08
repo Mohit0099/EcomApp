@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'Login/drawer.dart';
 import 'item_cart.dart';
 
 class Home extends StatefulWidget {
@@ -23,7 +24,6 @@ class _HomeState extends State<Home> {
             backgroundColor: Colors.blueGrey,
             centerTitle: true,
             title: Text("Ecom"),
-            leading: Icon(Icons.sort),
             actions: [
               IconButton(
                 icon: SvgPicture.asset("assets/icon/cart.svg"),
@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
                 },
               ),
             ]),
+        drawer: drawer(),
         body: Container(
           padding: EdgeInsets.all(15),
           child: Column(

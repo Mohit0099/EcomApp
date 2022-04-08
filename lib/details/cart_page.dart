@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:ecom/models/cartmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blueGrey,
         centerTitle: true,
         title: Text("Cart"),
       ),
@@ -46,7 +47,9 @@ class _cart extends StatelessWidget {
             onPressed: () {},
             child: ElevatedButton(
               child: Text("Buy now".toUpperCase()),
-              onPressed: () => {},
+              onPressed: () => {
+                Navigator.pushNamed(context, '/mygooglepay'),
+              },
               style: ElevatedButton.styleFrom(
                 primary: Colors.blueGrey,
                 onPrimary: Colors.white,
